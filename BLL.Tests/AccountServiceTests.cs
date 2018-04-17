@@ -1,4 +1,7 @@
-﻿using NUnit.Framework;
+﻿using BLL.ServiceImplementation;
+using DAL.Interface.Interfaces;
+using NUnit.Framework;
+using Moq;
 
 namespace BLL.Tests
 {
@@ -6,8 +9,9 @@ namespace BLL.Tests
     public class AccountServiceTests
     {
         [Test]
-        public void TestMethod1()
+        public void AccountServiceTest()
         {
+
         }
     }
 }
