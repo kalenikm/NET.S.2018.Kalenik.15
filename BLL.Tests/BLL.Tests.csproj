@@ -93,6 +93,10 @@
       <Project>{7cdbea2f-7034-4135-859b-4d8f8cb2ea23}</Project>
       <Name>DAL.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{63d8e3df-d44b-479f-b246-0de548b9dc9e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
