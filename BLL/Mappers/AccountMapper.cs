@@ -11,7 +11,7 @@ namespace BLL.Mappers
         {
             if (ReferenceEquals(null, account))
             {
-                throw new ArgumentNullException();
+                throw new ArgumentNullException($"{nameof(account)} is null.");
             }
 
             AccountType type = AccountTypeMapper.ToBllModel(account.Type);
@@ -23,7 +23,7 @@ namespace BLL.Mappers
         {
             if (ReferenceEquals(null, account))
             {
-                throw new ArgumentNullException();
+                throw new ArgumentNullException($"{nameof(account)} is null.");
             }
 
             return new Account(account.AccountNumber, account.FirstName, account.LastName, account.Balance, account.Bonus, account.Type.ToString());

@@ -35,7 +35,7 @@ namespace DAL.Repositories
         {
             if (ReferenceEquals(null, items))
             {
-                throw new ArgumentNullException();
+                throw new ArgumentNullException($"{nameof(items)} is null.");
             }
 
             using (var aw = new AccountWriter(new FileStream(_filename, FileMode.Create)))

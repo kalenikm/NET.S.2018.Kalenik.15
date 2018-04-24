@@ -17,7 +17,7 @@ namespace DAL
         {
             if (ReferenceEquals(null, stream))
             {
-                throw new ArgumentException();
+                throw new ArgumentException($"{nameof(stream)} is null.");
             }
 
             _stream = stream;

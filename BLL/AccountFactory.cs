@@ -23,7 +23,7 @@ namespace BLL
                     bonusCalculator = PlatinumBonusCalculator.GetInstance;
                     break;
                 default:
-                    throw new ArgumentException();
+                    throw new ArgumentException("Wrong type.");
             }
             return new BankAccount(number, firstname, lastname, type, bonusCalculator, money, bonus);
         }

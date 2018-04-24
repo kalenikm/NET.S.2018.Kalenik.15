@@ -16,7 +16,7 @@ namespace DAL
         {
             if (ReferenceEquals(null, stream))
             {
-                throw new ArgumentNullException();
+                throw new ArgumentNullException($"{nameof(stream)} is null.");
             }
 
             _stream = stream;
@@ -29,7 +29,7 @@ namespace DAL
         public void Write(Account account)
         {
             if (account == null)
-                throw new ArgumentNullException();
+                throw new ArgumentNullException($"{nameof(account)} is null.");
 
             var bw = new BinaryWriter(_stream);
             bw.Write(account.AccountNumber);

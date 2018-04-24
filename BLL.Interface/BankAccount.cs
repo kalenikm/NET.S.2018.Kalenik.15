@@ -1,7 +1,6 @@
 ﻿using System;
-using BLL.Interface;
 
-namespace BLL.ServiceImplementation
+namespace BLL.Interface
 {
     public class BankAccount
     {
@@ -87,7 +86,7 @@ namespace BLL.ServiceImplementation
         {
             if (currency <= 0)
             {
-                throw new ArgumentException();
+                throw new ArgumentException($"Amount of money can't be negative.");
             }
 
             _money += currency;
@@ -102,12 +101,12 @@ namespace BLL.ServiceImplementation
         {
             if (currency <= 0)
             {
-                throw new ArgumentException();
+                throw new ArgumentException($"Amount of money can't be negative.");
             }
 
             if (currency > _money)
             {
-                throw new ArgumentException();
+                throw new ArgumentException($"No such amount of money to withdraw.");
             }
 
             _money -= currency;
