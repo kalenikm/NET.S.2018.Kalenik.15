@@ -9,6 +9,10 @@ namespace DAL
     {
         private readonly Stream _stream;
 
+        /// <summary>
+        /// Creates new instance of AccountReader.
+        /// </summary>
+        /// <param name="stream">Base stream to AccountReader.</param>
         public AccountReader(Stream stream)
         {
             if (ReferenceEquals(null, stream))
@@ -19,6 +23,10 @@ namespace DAL
             _stream = stream;
         }
 
+        /// <summary>
+        /// Reads account from stream.
+        /// </summary>
+        /// <returns>Account that was read from stream. Or null if stream is empty.</returns>
         public Account Read()
         {
             Account account = null;
@@ -31,6 +39,10 @@ namespace DAL
             return account;
         }
 
+        /// <summary>
+        /// Checks end of stream.
+        /// </summary>
+        /// <returns>True/false.</returns>
         public bool IsEnd()
         {
             return !(_stream.Length > _stream.Position);

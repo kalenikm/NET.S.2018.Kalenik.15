@@ -57,7 +57,17 @@ namespace BLL.ServiceImplementation
         public AccountType Type => _type;
 
         #endregion
-
+        
+        /// <summary>
+        /// Creates new instance of BankAccount.
+        /// </summary>
+        /// <param name="accountNumber">Number of account.</param>
+        /// <param name="firstname">First name of owner.</param>
+        /// <param name="lastname">Last name of owner.</param>
+        /// <param name="type">Type of account.</param>
+        /// <param name="bonusCalculator">Bonus calculator of account.</param>
+        /// <param name="money">Balance of account.</param>
+        /// <param name="bonus">Count of bonus of account.</param>
         public BankAccount(long accountNumber, string firstname, string lastname, AccountType type, BonusCalculator bonusCalculator, decimal money = 0, int bonus = 0)
         {
             _accountNumber = accountNumber;
@@ -69,6 +79,10 @@ namespace BLL.ServiceImplementation
             _bonus = bonus;
         }
 
+        /// <summary>
+        /// Deposit money to balance.
+        /// </summary>
+        /// <param name="currency">Amount of money.</param>
         public void Deposit(decimal currency)
         {
             if (currency <= 0)
@@ -80,6 +94,10 @@ namespace BLL.ServiceImplementation
             _bonus += _bonusCalculator.CalculateBonusForDeposit(currency);
         }
 
+        /// <summary>
+        /// Withdraw money from balance.
+        /// </summary>
+        /// <param name="currency">Amount of money.</param>
         public void Withdraw(decimal currency)
         {
             if (currency <= 0)

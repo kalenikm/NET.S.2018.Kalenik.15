@@ -14,6 +14,10 @@ namespace BLL.ServiceImplementation
         private readonly List<BankAccount> _accounts = new List<BankAccount>();
         private readonly IAccountStorage _storage;
 
+        /// <summary>
+        /// Creates new instance of AccountService.
+        /// </summary>
+        /// <param name="storage">Repository to use with service.</param>
         public AccountService(IAccountStorage storage)
         {
             _storage = storage;

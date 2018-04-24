@@ -9,6 +9,11 @@ namespace DAL.Repositories
     public class BinaryAccountStorage : IAccountStorage
     {
         private readonly string _filename;
+
+        /// <summary>
+        /// Creates new repository based on binary file.
+        /// </summary>
+        /// <param name="filename">Name of file.</param>
         public BinaryAccountStorage(string filename)
         {
             _filename = filename;

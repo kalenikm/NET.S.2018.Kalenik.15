@@ -8,6 +8,10 @@ namespace DAL
     {
         private Stream _stream;
 
+        /// <summary>
+        /// Creates new instance of AccountWriter.
+        /// </summary>
+        /// <param name="stream">Base stream to AccountWriter.</param>
         public AccountWriter(Stream stream)
         {
             if (ReferenceEquals(null, stream))
@@ -18,6 +22,10 @@ namespace DAL
             _stream = stream;
         }
 
+        /// <summary>
+        /// Writes account to stream.
+        /// </summary>
+        /// <param name="account">Account to write in stream.</param>
         public void Write(Account account)
         {
             if (account == null)
