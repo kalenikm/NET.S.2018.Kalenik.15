@@ -2,7 +2,7 @@
 {
     public class Account
     {
-        public long AccountNumber { get; set; }
+        public long Id { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public decimal Money { get; set; }
@@ -20,12 +20,14 @@
         /// <param name="type">Type of account.</param>
         public Account(long number, string firstname, string lastname, decimal money, int bonus, string type)
         {
-            AccountNumber = number;
+            Id = number;
             Firstname = firstname;
             Lastname = lastname;
             Money = money;
             Bonus = bonus;
             Type = type;
         }
+
+        public Account() { }
     }
 }

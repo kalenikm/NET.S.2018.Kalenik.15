@@ -32,7 +32,7 @@ namespace DAL
                 throw new ArgumentNullException($"{nameof(account)} is null.");
 
             var bw = new BinaryWriter(_stream);
-            bw.Write(account.AccountNumber);
+            bw.Write(account.Id);
             bw.Write(account.Firstname);
             bw.Write(account.Lastname);
             bw.Write(account.Money);

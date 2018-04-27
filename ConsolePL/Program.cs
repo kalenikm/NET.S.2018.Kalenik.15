@@ -1,9 +1,6 @@
 ﻿using System;
-using BLL;
 using BLL.Interface;
 using BLL.Interface.Interfaces;
-using BLL.ServiceImplementation;
-using DAL.Interface.Interfaces;
 using DependencyResolver;
 using Ninject;
 

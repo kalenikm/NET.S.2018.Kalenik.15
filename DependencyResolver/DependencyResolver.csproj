@@ -59,6 +59,10 @@
       <Project>{72d3c595-0648-4386-9d1d-11c02dad3bdb}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL.EF\DAL.EF.csproj">
+      <Project>{f8ee0dfa-c93c-4f9c-87b3-9def5e2fe2cc}</Project>
+      <Name>DAL.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
       <Project>{7cdbea2f-7034-4135-859b-4d8f8cb2ea23}</Project>
       <Name>DAL.Interface</Name>

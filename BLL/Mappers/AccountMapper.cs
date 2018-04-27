@@ -16,7 +16,7 @@ namespace BLL.Mappers
 
             AccountType type = AccountTypeMapper.ToBllModel(account.Type);
 
-            return AccountFactory.Create(account.Firstname, account.Lastname, type, account.AccountNumber);
+            return AccountFactory.Create(account.Firstname, account.Lastname, type, account.Id);
         }
 
         public static Account FromBllModel(BankAccount account)
