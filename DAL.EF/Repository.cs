@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DAL.Interface;
 using DAL.Interface.Interfaces;
 
@@ -6,7 +7,7 @@ namespace DAL.EF
 {
     public class Repository : IAccountStorage
     {
-        private Context _db;
+        private readonly Context _db;
 
         public Repository()
         {
@@ -15,6 +16,11 @@ namespace DAL.EF
 
         public IEnumerable<Account> Read()
         {
+            if (ReferenceEquals(null, _db))
+            {
+                throw new ArgumentNullException($"DBcontext is null.");
+            }
+
             foreach (var dbAccount in _db.Accounts)
             {
                 yield return dbAccount;
@@ -23,6 +29,11 @@ namespace DAL.EF
 
         public void Load(IEnumerable<Account> items)
         {
+            if (ReferenceEquals(null, items))
+            {
+                throw new ArgumentNullException($"{nameof(items)} is null.");
+            }
+
             _db.Accounts.AddRange(items);
             _db.SaveChanges();
         }
